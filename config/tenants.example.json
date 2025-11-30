@@ -1,0 +1,15 @@
+{
+  "tenants": [
+    {
+      "id": "hq",
+      "name": "Headquarters PBX",
+      "baseUrl": "https://pbx.example.com:5001",
+      "apiKey": "paste-3cx-api-key",
+      "timezone": "America/New_York",
+      "features": {
+        "monitoring": true,
+        "actions": true
+      }
+    }
+  ]
+}
