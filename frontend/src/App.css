@@ -1,0 +1,272 @@
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #4338ca;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -20px rgba(15, 23, 42, 0.4);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subtle {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.tenant-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+select,
+textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5f5;
+  padding: 0.65rem 0.9rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid #cbd5f5;
+  color: #2563eb;
+}
+
+.alert {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.alert-info {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-height: 120px;
+}
+
+.metric-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.35rem 0;
+}
+
+.metric-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.metric {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.metric.ok {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.metric.warning {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.metric.critical {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.status-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-pill {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.65rem;
+  background: #f8fafc;
+  font-size: 0.9rem;
+}
+
+.status-pill.running {
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.status-pill.warning,
+.status-pill.degraded {
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+.status-pill.stopped,
+.status-pill.down {
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.recommendations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recommendation {
+  border-radius: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.recommendation.info {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.recommendation.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.recommendation.critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.data-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.data-panel th,
+.data-panel td {
+  text-align: left;
+  padding: 0.4rem 0.25rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.data-panel th {
+  font-weight: 600;
+  color: #475569;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .tenant-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button.ghost {
+    width: 100%;
+  }
+}

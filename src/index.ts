@@ -1,3 +1,6 @@
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
@@ -35,6 +38,20 @@ app.get('/healthz', (_req, res) => {
 });
 
 app.use('/api', buildPbxRouter(monitoringService, snapshotStore));
+
+const frontendDir = path.resolve(__dirname, '../frontend/dist');
+if (existsSync(frontendDir)) {
+  logger.info({ frontendDir }, 'Serving static frontend assets');
+  app.use(express.static(frontendDir));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    return res.sendFile(path.join(frontendDir, 'index.html'));
+  });
+} else {
+  logger.warn({ frontendDir }, 'Frontend build not found. UI will be unavailable until built.');
+}
 
 const server = app.listen(appConfig.PORT, () => {
   logger.info({ port: appConfig.PORT }, '3CX Remote Management service started');
